@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title='Account Apex' icon-name="standard:account" variant="base">
+      <div class="slds-var-m-around_medium">
+        <template if:true={accountList}>
+            <template for:each={accountList} for:item="acc">
+                <div key={acc.id} class="slds-box slds-var-m-around_medium">
+                    <p>Name:{acc.Name}</p>
+                    <p>Industry:{acc.Industry}</p>
+                    <p>Rating:{acc.Rating}</p>
+                </div>
+            </template>
+        </template>
+      </div>
+    </lightning-card>
+</template>
